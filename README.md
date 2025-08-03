@@ -8,7 +8,7 @@ This project is a full-stack MERN (MongoDB, Express, React, Node.js) application
 - **Application**: MERN
 - **Containerization**: Docker, Docker Compose
 
-Note: This project was built to practice Docker and Docker Compose by containerizing a MERN stack application and setting up multi-service orchestration.
+**Note:** This project was built to practice Docker and Docker Compose by containerizing a MERN stack application and setting up multi-service orchestration.
 
 
 ## 🛠️ Learnings
