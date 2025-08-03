@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+
+  frontend:
+    build:
+      context: ./mern/frontend
+    ports:
+      - "5173:5173"
+    networks:
+      - mern-docker-network
+  
+  backend:
+    build:
+      context: ./mern/backend
+    ports:
+      - "5050:5050"
+    networks:
+      - mern-docker-network
+    depends_on:
+      - db
+
+
+  db:
+    image: mongo:latest
+    container_name: mongo_db
+    ports:
+      - "27017:27017"
+    networks: 
+      - mern-docker-network
+    volumes:
+      - db_data:/data/db
+
+volumes:
+  db_data:
+
+networks:
+  mern-docker-network:
